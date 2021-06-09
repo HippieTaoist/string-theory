@@ -171,16 +171,23 @@ console.log('----------------------------------------------');
 console.log('----------------------------------------------');
 console.log('------------------ciEmailify--------------------');
 
+outStr = '';
 
-function ciEmailify(fName, lName) {
-    let email = fName + '.' + lName + "@codeimmersives.com";
-    return email;
+function ciEmailify(fullName) {
+    // * `ciEmailify` - creates an email from a two-part name
+    //   * Examples:
+    //     * ciEmailify('colin jaffe') -> 'colin.jaffe@codeimmersives.com'
+    //     * ciEmailify('Anthony DeRosa') -> 'anthony.derosa@codeimmersives.com'
+    for (let char of fullName) {
+        if (char === ' ') { char = '.' };
+        outStr += char;
+    }
+
+    let email = outStr + "@codeimmersives.com";
+    return email.toLowerCase();
 }
-console.log(ciEmailify('Shawn', 'Kittel'));
-// * `ciEmailify` - creates an email from a two-part name
-//   * Examples:
-//     * ciEmailify('colin jaffe') -> 'colin.jaffe@codeimmersives.com'
-//     * ciEmailify('Anthony DeRosa') -> 'anthony.derosa@codeimmersives.com'
+console.log(ciEmailify('Shawn Kittel'));
+
 
 
 
