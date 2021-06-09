@@ -7,6 +7,9 @@ let outStr = '';
 let charCount = 0
 console.log(str)
 
+console.log('------------------------------------------');
+console.log('------------------------------------------');
+console.log('------------------XIFY--------------------');
 ////////////////// XIFY////////////////////////////
 function xify(str) {
     // * `xify` - returns the same string, but with every character replaced by an 'x'
@@ -24,6 +27,9 @@ function xify(str) {
 console.log(xify(str));
 //CODE WORKS ABOVE THIS LINE
 
+console.log('--------------------------------------------------');
+console.log('--------------------------------------------------');
+console.log('------------------YELLINGCHARS--------------------');
 //////////////////////YELLINGCHARS///////////////////
 outStr = '';
 
@@ -46,6 +52,9 @@ console.log(yellingChars(str))
 
 outStr = ''
 charCount = 0;
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------INDEXCHARS--------------------');
 ////////////////////INDEXCHARS/////////////////
 function indexedChars(str) {
     // * `indexedChars` - adds the index of each character before that character in the given string
@@ -66,6 +75,9 @@ console.log(indexedChars(str));
 
 outStr = '';
 charCount = 0;
+console.log('---------------------------------------------------');
+console.log('---------------------------------------------------');
+console.log('------------------NUMBEREDCHARS--------------------');
 /////////////////////////NUMBEREDCHARS//////////////////
 function numberedChars(str) {
     // * `numberedChars` - adds the number of each character before that character in the given string
@@ -88,6 +100,9 @@ console.log(numberedChars(str))
 
 outStr = '';
 charCount = 0;
+console.log('---------------------------------------------');
+console.log('---------------------------------------------');
+console.log('------------------EXCLAIM--------------------');
 //////////////////////EXCLAIM/////////////////////////////
 function exclaim(str) {
     // * `exclaim` - returns the given sentence with every question mark or period changed to an exclamation point
@@ -104,9 +119,15 @@ function exclaim(str) {
 console.log(exclaim(str));
 
 outStr = '';
-
+console.log('----------------------------------------------');
+console.log('----------------------------------------------');
+console.log('------------------REPEATIT--------------------');
 ////////////////////REPEATIT////////////////////////
 function repeatIt(str, reps) {
+    // * `repeatIt` - returns the given string repeated `n` times, where `n` is the second parameter
+    //   * Examples:
+    //     * repeatIt('beetlejuice', 3) -> 'beetlejuicebeetlejuicebeetlejuice'
+    //     * repeatIt('oh hi!', 8) -> 'oh hi!oh hi!oh hi!oh hi!oh hi!oh hi!oh hi!oh hi!'
     reps = 5;
     while (reps >= 0) {
         outStr += str;
@@ -115,48 +136,84 @@ function repeatIt(str, reps) {
     return outStr
 }
 console.log(repeatIt(str))
+    ///Code Works Above This Line
 
+console.log('----------------------------------------------');
+console.log('----------------------------------------------');
+console.log('------------------TRUNCATE--------------------');
+outStr = ''
+charCount = 0;
 
+function truncate(str, strLength) {
+    console.log(str, strLength, outStr)
+    console.log('');
+    console.log('');
+    char = '';
+    while (strLength !== 0) {
+        for (let char of str[charCount]) {
+            outStr += char;
 
-
-
-
-
-// * `repeatIt` - returns the given string repeated `n` times, where `n` is the second parameter
-//   * Examples:
-//     * repeatIt('beetlejuice', 3) -> 'beetlejuicebeetlejuicebeetlejuice'
-//     * repeatIt('oh hi!', 8) -> 'oh hi!oh hi!oh hi!oh hi!oh hi!oh hi!oh hi!oh hi!'
+        }
+        charCount++;
+        strLength--;
+        console.log(strLength)
+    }
+    outStr += '...';
+    ``
+    return outStr;
+}
+console.log(truncate(str, 15));
 // * `truncate` - shortens a long string to 15 characters plus an ellipsis (...)
 //   * Examples:
 //     * truncate('The fault, dear Brutus, is not in our stars, but in ourselves.') -> 'The fault, dear...'
 //     * truncate("Well, that's just, like, your opinion man.") -> "Well, that's ju..."
+
+
 // * `ciEmailify` - creates an email from a two-part name
 //   * Examples:
 //     * ciEmailify('colin jaffe') -> 'colin.jaffe@codeimmersives.com'
 //     * ciEmailify('Anthony DeRosa') -> 'anthony.derosa@codeimmersives.com'
+
+
+
 // * `reverse` - reverses the given string
 //   * Examples:
 //     * reverse('colin') -> 'niloc'
 //     * reverse('mesuara') -> 'arausem'
+
+
+
+
 // * `onlyVowels` - returns only the vowels from a word
 //   * Examples:
 //     * onlyVowels('Colin Jaffe') -> 'oiae'
 //     * onlyVowels('quickly') -> 'ui'
 //     * onlyVowels('Anthony DeRosa') -> 'Aoeoa'
+
+
+
 // * `crazyCase` - returns the given string with alternating lower and upper cases
 //   * Examples:
 //     * crazyCase('hello') -> 'hElLo'
 //     * crazyCase('multiple words here') -> 'mUlTiPlE WoRdS HeRe'
 //     * crazyCase('YELLING') -> 'yElLiNg'
+
+
 // * `titleCase` - returns a transformed version of the given string where every word starts with a capital letter and every non-word-starting letter is lowercased
 //   * Examples:
 //     * titleCase('return of the king') -> 'Return Of The King'
 //     * titleCase('cOde iMMerSives') -> 'Code Immersives'
+
+
+
 // * `camelCase` - returns the given string in camel case
 //   * Examples:
 //     * camelCase('oh Hello') -> 'ohHello'
 //     * camelCase('well yeah of course') -> 'wellYeahOfCourse'
 //     * camelCase('Boy howdy') -> 'boyHowdy'
+
+
+
 // * `crazyCase2ReturnOfCrazyCase` - same as `crazyCase`, but does NOT count spaces as letters to upper or lower case (see examples below!)
 //   * Examples:
 //     * crazyCase2ReturnOfCrazyCase('multiple words here') -> 'mUlTiPlE wOrDs HeRe'
