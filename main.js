@@ -2,18 +2,17 @@
 
 // * Other than `.toUpperCase` and `.toLowerCase`, don't use any string methods. Sure, `.slice` would be nice here, or `.repeat`. But you'll learn just a ton more if you use actual loops!
 
-////////////////// WIFY////////////////////////////
-// * `xify` - returns the same string, but with every character replaced by an 'x'
-//   * Examples:
-//     * xify('hello') -> 'xxxxx'
-//     * xify('hi there') -> 'xxxxxxxx'
-
-const str = 'hello there!';
+const str = 'Loving Me Some Javascript!!';
 let outStr = '';
-console.log(str)
 let charCount = 0
+console.log(str)
 
+////////////////// XIFY////////////////////////////
 function xify(str) {
+    // * `xify` - returns the same string, but with every character replaced by an 'x'
+    //   * Examples:
+    //     * xify('hello') -> 'xxxxx'
+    //     * xify('hi there') -> 'xxxxxxxx'
     for (let char of str) {
         char = 'x';
 
@@ -23,14 +22,18 @@ function xify(str) {
 
 }
 console.log(xify(str));
-
 //CODE WORKS ABOVE THIS LINE
 
 //////////////////////YELLINGCHARS///////////////////
-// * `yellingChars` - returns the given string with an exclamation point after each character
 outStr = '';
 
 function yellingChars(str) {
+    // * `yellingChars` - returns the given string with an exclamation point after each character
+    //   * Examples:
+    //     * yellingChars('goodness') -> 'g!o!o!d!n!e!s!s!'
+    //     * yellingChars('oh hello') -> 'o!h! !h!e!l!l!o!'
+    //   * Hints:
+    //     * We can add more than one thing to the string each time through the loop. In this case, it's the current character AND an exlamation point.
     for (let char of str) {
         char += '!';
 
@@ -39,24 +42,18 @@ function yellingChars(str) {
     return outStr
 }
 console.log(yellingChars(str))
-    //   * Examples:
-    //     * yellingChars('goodness') -> 'g!o!o!d!n!e!s!s!'
-    //     * yellingChars('oh hello') -> 'o!h! !h!e!l!l!o!'
-    //   * Hints:
-    //     * We can add more than one thing to the string each time through the loop. In this case, it's the current character AND an exlamation point.
     //CODE WORKS ABOVE THIS LINE
 
-////////////////////INDEXCHARS/////////////////
-// * `indexedChars` - adds the index of each character before that character in the given string
-//   * Examples:
-//     * indexedChars('hello') -> '0h1e2l3l4o'
-//     * indexedChars('bye') -> '0b1y2e'
-//   * Hints: 
-//     * We can add something BEFORE the current character as well!
 outStr = ''
 charCount = 0;
-
+////////////////////INDEXCHARS/////////////////
 function indexedChars(str) {
+    // * `indexedChars` - adds the index of each character before that character in the given string
+    //   * Examples:
+    //     * indexedChars('hello') -> '0h1e2l3l4o'
+    //     * indexedChars('bye') -> '0b1y2e'
+    //   * Hints: 
+    //     * We can add something BEFORE the current character as well!
     for (let char of str) {
         char += charCount;
         outStr += char;
@@ -65,17 +62,36 @@ function indexedChars(str) {
     return outStr;
 }
 console.log(indexedChars(str));
+//Code Works Above This Line
+
+outStr = '';
+charCount = 0;
+/////////////////////////numberedChars//////////////////
+function numberedChars(str) {
+    // * `numberedChars` - adds the number of each character before that character in the given string
+    //   * Examples:
+    //     * numberedChars('hello') -> '(1)h(2)e(3)l(4)l(5)o'
+    //     * numberedChars('bye') -> '(1)b(2)y(3)e'
+    //   * Hints: 
+    //     * there's a simple relationship between the index and the number... indices are 0-based counting and numbers are 1-based... you'll figure it out!
+    for (let char of str) {
+        char = ('(', charCount, ')') + char;
+        outStr += char;
+        charCount++;
+    }
+    return outStr;
+}
+console.log(numberedChars(str))
 
 
 
 
 
-// * `numberedChars` - adds the number of each character before that character in the given string
-//   * Examples:
-//     * numberedChars('hello') -> '(1)h(2)e(3)l(4)l(5)o'
-//     * numberedChars('bye') -> '(1)b(2)y(3)e'
-//   * Hints: 
-//     * there's a simple relationship between the index and the number... indices are 0-based counting and numbers are 1-based... you'll figure it out!
+
+
+
+
+
 // * `exclaim` - returns the given sentence with every question mark or period changed to an exclamation point
 //   * Examples:
 //     * exclaim('What are you doing? Are you a fool?') -> 'What are you doing! Are you a fool!'
