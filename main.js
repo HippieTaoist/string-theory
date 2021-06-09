@@ -95,16 +95,26 @@ function exclaim(str) {
     //     * exclaim('What are you doing? Are you a fool?') -> 'What are you doing! Are you a fool!'
     //     * exclaim('This is fine.') -> 'This is fine!'
     for (let char of str) {
-        console.log(char);
         if (char === '?') { char = '!' };
         if (char === '.') { char = '!' };
         outStr += char;
-        console.log(char)
     }
     return outStr
 }
 console.log(exclaim(str));
 
+outStr = '';
+
+////////////////////REPEATIT////////////////////////
+function repeatIt(str, reps) {
+    reps = 5;
+    while (reps >= 0) {
+        outStr += str;
+        reps--;
+    }
+    return outStr
+}
+console.log(repeatIt(str))
 
 
 
