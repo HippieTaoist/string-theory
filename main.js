@@ -156,7 +156,6 @@ function truncate(str, strLength) {
         }
         charCount++;
         strLength--;
-        console.log(strLength)
     }
     outStr += '...';
     ``
