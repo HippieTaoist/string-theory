@@ -2,7 +2,7 @@
 
 // * Other than `.toUpperCase` and `.toLowerCase`, don't use any string methods. Sure, `.slice` would be nice here, or `.repeat`. But you'll learn just a ton more if you use actual loops!
 
-
+////////////////// WIFY////////////////////////////
 // * `xify` - returns the same string, but with every character replaced by an 'x'
 //   * Examples:
 //     * xify('hello') -> 'xxxxx'
@@ -18,28 +18,58 @@ function xify(str) {
         char = 'x';
 
         outStr += char;
-        charCount++;
     }
     return outStr
 
 }
 console.log(xify(str));
 
+//CODE WORKS ABOVE THIS LINE
 
-
-
+//////////////////////YELLINGCHARS///////////////////
 // * `yellingChars` - returns the given string with an exclamation point after each character
-//   * Examples:
-//     * yellingChars('goodness') -> 'g!o!o!d!n!e!s!s!'
-//     * yellingChars('oh hello') -> 'o!h! !h!e!l!l!o!'
-//   * Hints:
-//     * We can add more than one thing to the string each time through the loop. In this case, it's the current character AND an exlamation point.
+outStr = '';
+
+function yellingChars(str) {
+    for (let char of str) {
+        char += '!';
+
+        outStr += char;
+    }
+    return outStr
+}
+console.log(yellingChars(str))
+    //   * Examples:
+    //     * yellingChars('goodness') -> 'g!o!o!d!n!e!s!s!'
+    //     * yellingChars('oh hello') -> 'o!h! !h!e!l!l!o!'
+    //   * Hints:
+    //     * We can add more than one thing to the string each time through the loop. In this case, it's the current character AND an exlamation point.
+    //CODE WORKS ABOVE THIS LINE
+
+////////////////////INDEXCHARS/////////////////
 // * `indexedChars` - adds the index of each character before that character in the given string
 //   * Examples:
 //     * indexedChars('hello') -> '0h1e2l3l4o'
 //     * indexedChars('bye') -> '0b1y2e'
 //   * Hints: 
 //     * We can add something BEFORE the current character as well!
+outStr = ''
+charCount = 0;
+
+function indexedChars(str) {
+    for (let char of str) {
+        char += charCount;
+        outStr += char;
+        charCount++;
+    }
+    return outStr;
+}
+console.log(indexedChars(str));
+
+
+
+
+
 // * `numberedChars` - adds the number of each character before that character in the given string
 //   * Examples:
 //     * numberedChars('hello') -> '(1)h(2)e(3)l(4)l(5)o'
