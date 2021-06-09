@@ -2,7 +2,7 @@
 
 // * Other than `.toUpperCase` and `.toLowerCase`, don't use any string methods. Sure, `.slice` would be nice here, or `.repeat`. But you'll learn just a ton more if you use actual loops!
 
-const str = 'Loving Me Some Javascript!!';
+const str = 'Loving Me Some Javascript!! what is wrong with you? I know you love it too.';
 let outStr = '';
 let charCount = 0
 console.log(str)
@@ -66,7 +66,7 @@ console.log(indexedChars(str));
 
 outStr = '';
 charCount = 0;
-/////////////////////////numberedChars//////////////////
+/////////////////////////NUMBEREDCHARS//////////////////
 function numberedChars(str) {
     // * `numberedChars` - adds the number of each character before that character in the given string
     //   * Examples:
@@ -84,6 +84,26 @@ function numberedChars(str) {
     return outStr;
 }
 console.log(numberedChars(str))
+    //Code Works Above This Line
+
+outStr = '';
+charCount = 0;
+//////////////////////EXCLAIM/////////////////////////////
+function exclaim(str) {
+    // * `exclaim` - returns the given sentence with every question mark or period changed to an exclamation point
+    //   * Examples:
+    //     * exclaim('What are you doing? Are you a fool?') -> 'What are you doing! Are you a fool!'
+    //     * exclaim('This is fine.') -> 'This is fine!'
+    for (let char of str) {
+        console.log(char);
+        if (char === '?') { char = '!' };
+        if (char === '.') { char = '!' };
+        outStr += char;
+        console.log(char)
+    }
+    return outStr
+}
+console.log(exclaim(str));
 
 
 
@@ -92,12 +112,6 @@ console.log(numberedChars(str))
 
 
 
-
-
-// * `exclaim` - returns the given sentence with every question mark or period changed to an exclamation point
-//   * Examples:
-//     * exclaim('What are you doing? Are you a fool?') -> 'What are you doing! Are you a fool!'
-//     * exclaim('This is fine.') -> 'This is fine!'
 // * `repeatIt` - returns the given string repeated `n` times, where `n` is the second parameter
 //   * Examples:
 //     * repeatIt('beetlejuice', 3) -> 'beetlejuicebeetlejuicebeetlejuice'
