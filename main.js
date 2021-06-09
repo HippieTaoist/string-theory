@@ -75,9 +75,11 @@ function numberedChars(str) {
     //   * Hints: 
     //     * there's a simple relationship between the index and the number... indices are 0-based counting and numbers are 1-based... you'll figure it out!
     for (let char of str) {
-        char = ('(', charCount, ')') + char;
-        outStr += char;
         charCount++;
+        let charCountBuildUp = '(' + charCount + ')';
+        char = charCountBuildUp + char;
+        outStr += char;
+
     }
     return outStr;
 }
