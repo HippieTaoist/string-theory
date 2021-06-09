@@ -145,6 +145,10 @@ outStr = ''
 charCount = 0;
 
 function truncate(str, strLength) {
+    // * `truncate` - shortens a long string to 15 characters plus an ellipsis (...)
+    //   * Examples:
+    //     * truncate('The fault, dear Brutus, is not in our stars, but in ourselves.') -> 'The fault, dear...'
+    //     * truncate("Well, that's just, like, your opinion man.") -> "Well, that's ju..."
     console.log(str, strLength, outStr)
     console.log('');
     console.log('');
@@ -162,12 +166,17 @@ function truncate(str, strLength) {
     return outStr;
 }
 console.log(truncate(str, 15));
-// * `truncate` - shortens a long string to 15 characters plus an ellipsis (...)
-//   * Examples:
-//     * truncate('The fault, dear Brutus, is not in our stars, but in ourselves.') -> 'The fault, dear...'
-//     * truncate("Well, that's just, like, your opinion man.") -> "Well, that's ju..."
+
+console.log('----------------------------------------------');
+console.log('----------------------------------------------');
+console.log('------------------ciEmailify--------------------');
 
 
+function ciEmailify(fName, lName) {
+    let email = fName + '.' + lName + "@codeimmersives.com";
+    return email;
+}
+console.log(ciEmailify('Shawn', 'Kittel'));
 // * `ciEmailify` - creates an email from a two-part name
 //   * Examples:
 //     * ciEmailify('colin jaffe') -> 'colin.jaffe@codeimmersives.com'
