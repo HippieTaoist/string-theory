@@ -193,6 +193,10 @@ outStr = '';
 count = 0;
 
 function reverse(str) {
+    // * `reverse` - reverses the given string
+    //   * Examples:
+    //     * reverse('colin') -> 'niloc'
+    //     * reverse('mesuara') -> 'arausem'
     let strLength = 0;
     for (let char of str) {
         count++;
@@ -209,10 +213,56 @@ function reverse(str) {
 }
 console.log(reverse(str));
 
-// * `reverse` - reverses the given string
-//   * Examples:
-//     * reverse('colin') -> 'niloc'
-//     * reverse('mesuara') -> 'arausem'
+//////////////////ONLYVOWELS/////////////////
+console.log('----------------------------------------------');
+console.log('----------------------------------------------');
+console.log('------------------ONLYVOWELS--------------------');
+
+outStr = '';
+count = 0;
+
+function onlyVowels(str) {
+    for (let char of str) {
+
+        if (char === 'a') {
+
+            outStr += char;
+            count++;
+
+
+        }
+        if (char === 'e') {
+
+            outStr += char;
+            count++;
+
+
+        }
+        if (char === 'i') {
+
+            outStr += char;
+            count++;
+
+
+        }
+        if (char === 'o') {
+
+            outStr += char;
+            count++;
+
+        }
+        if (char === 'u') {
+
+            outStr += char;
+            count++;
+
+        } else {
+            count++
+        }
+    }
+    return outStr
+}
+console.log(onlyVowels(str));
 
 
 
