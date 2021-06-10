@@ -189,7 +189,25 @@ function ciEmailify(fullName) {
 console.log(ciEmailify('Shawn Kittel'));
 
 
+outStr = '';
+count = 0;
 
+function reverse(str) {
+    let strLength = 0;
+    for (let char of str) {
+        count++;
+        strLength++
+    }
+    strLength--;
+    while (count > 0) {
+        console.log(count);
+        outStr += str[strLength];
+        strLength--;
+        count--
+    }
+    return outStr
+}
+console.log(reverse(str));
 
 // * `reverse` - reverses the given string
 //   * Examples:
@@ -204,7 +222,6 @@ console.log(ciEmailify('Shawn Kittel'));
 //     * onlyVowels('Colin Jaffe') -> 'oiae'
 //     * onlyVowels('quickly') -> 'ui'
 //     * onlyVowels('Anthony DeRosa') -> 'Aoeoa'
-
 
 
 // * `crazyCase` - returns the given string with alternating lower and upper cases
