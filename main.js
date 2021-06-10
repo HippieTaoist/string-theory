@@ -217,11 +217,15 @@ console.log(reverse(str));
 console.log('----------------------------------------------');
 console.log('----------------------------------------------');
 console.log('------------------ONLYVOWELS--------------------');
-
 outStr = '';
 count = 0;
 
 function onlyVowels(str) {
+    // * `onlyVowels` - returns only the vowels from a word
+    //   * Examples:
+    //     * onlyVowels('Colin Jaffe') -> 'oiae'
+    //     * onlyVowels('quickly') -> 'ui'
+    //     * onlyVowels('Anthony DeRosa') -> 'Aoeoa'
     for (let char of str) {
 
         if (char === 'a') {
@@ -266,12 +270,30 @@ console.log(onlyVowels(str));
 
 
 
+///////////////////////CRAZYCASE/////////////////
+console.log('----------------------------------------------');
+console.log('----------------------------------------------');
+console.log('------------------CRAZYCASE--------------------');
+outStr = '';
+count = 0;
 
-// * `onlyVowels` - returns only the vowels from a word
-//   * Examples:
-//     * onlyVowels('Colin Jaffe') -> 'oiae'
-//     * onlyVowels('quickly') -> 'ui'
-//     * onlyVowels('Anthony DeRosa') -> 'Aoeoa'
+function crazyCase(str) {
+    for (let char of str) {
+        if ((count % 2) === 0) {
+
+            outStr += char.toLowerCase();
+            console.log(outStr);
+
+        } else {
+
+            outStr += char.toUpperCase();
+        }
+        count++;
+    }
+
+}
+console.log(crazyCase(str));
+
 
 
 // * `crazyCase` - returns the given string with alternating lower and upper cases
